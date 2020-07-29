@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "slovodel-bot"
+version = "0.1.0"
+description = "Telegram bot that produces non-existing Russian words."
+authors = ["Simon Weiss <wonder@simonweiss.space>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/weiss-d/slovodel-bot"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+redis = "^3.5.3"
+rusyll = "^0.1.1"
+markovify = "^0.8.2"
+python-telegram-bot = "^12.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

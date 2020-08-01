@@ -8,15 +8,31 @@ readme = "README.md"
 repository = "https://github.com/weiss-d/slovodel-bot"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 redis = "^3.5.3"
 rusyll = "^0.1.1"
 markovify = "^0.8.2"
 python-telegram-bot = "^12.8"
+toml = "^0.10.1"
+click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.3"
+coverage = {extras = ["toml"], version = "^5.2.1"}
+pytest-cov = "^2.10.0"
+pytest-mock = "^3.2.0"
 
+[tool.coverage.paths]
+source = ["slovodel_bot", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+
+[tool.coverage.report]
+show_missing = true
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
+
+# Coverage.py config

@@ -1,3 +1,10 @@
+### Custom section ###
+# Sandbox
+_temp/
+
+# config with dev credentials
+bot_config_dev.toml
+
 # Created by https://www.toptal.com/developers/gitignore/api/python,vim,redis
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,vim,redis
 

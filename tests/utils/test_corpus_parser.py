@@ -9,19 +9,12 @@ def test_main(tmpdir):
     input_file = path.join("test_dict_1.txt")
     output_file = path.join("test_json_1.json")
 
-    input_file.write(
-        "Аба\n" + \
-        "аБаба \n" + \
-        "аб-ба\n" + \
-        "zвеве\n" + \
-        "ве ве\n" + \
-        "ве.\n"
-    )
+    input_file.write("Аба\n" + "аБаба \n" + "аб-ба\n" + "zвеве\n" + "ве ве\n" + "ве.\n")
 
     corpus = [
-        ['а', 'ба'],
-        ['а', 'ба', 'ба'],
-        ['аб', '-', 'ба'],
+        ["а", "ба"],
+        ["а", "ба", "ба"],
+        ["аб", "-", "ба"],
     ]
     chain = Chain(corpus, 1)
 
@@ -29,5 +22,5 @@ def test_main(tmpdir):
     result = runner.invoke(corpus_parser.main, [str(input_file), str(output_file)])
     assert "processed" in result.output
     assert result.exit_code == 0
-    with open(str(output_file), 'r') as test_json_1:
+    with open(str(output_file), "r") as test_json_1:
         assert test_json_1.read() == chain.to_json()

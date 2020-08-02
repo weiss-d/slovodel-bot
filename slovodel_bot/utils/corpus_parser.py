@@ -22,8 +22,8 @@ from rusyll import rusyll
 
 
 @click.command()
-@click.argument('input_file', type=click.File('r'))
-@click.argument('output_file', type=click.File('w+'))
+@click.argument("input_file", type=click.File("r"))
+@click.argument("output_file", type=click.File("w+"))
 def main(input_file, output_file):
     """Makes things happen."""
     corpus = []
@@ -32,9 +32,7 @@ def main(input_file, output_file):
     for line in input_file:
         lines_processed += 1
         try:
-            corpus.append(
-                rusyll.word_to_syllables_safe_wd(line.strip().lower())
-            )
+            corpus.append(rusyll.word_to_syllables_safe_wd(line.strip().lower()))
         except AssertionError:
             pass
 

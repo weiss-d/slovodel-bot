@@ -12,4 +12,3 @@ from enum import Enum
 from typing import List, Any
 
 wordTypes = Enum("wordTypes", "NOUN VERB ADJECTIVE")
-

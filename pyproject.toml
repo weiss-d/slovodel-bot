@@ -23,6 +23,13 @@ coverage = {extras = ["toml"], version = "^5.2.1"}
 pytest-cov = "^2.10.0"
 pytest-mock = "^3.2.0"
 fakeredis = "^1.4.1"
+black = "^19.10b0"
+flake8 = "^3.8.3"
+flake8-bandit = "^2.1.2"
+flake8-black = "^0.2.1"
+flake8-bugbear = "^20.1.4"
+flake8-import-order = "^0.18.1"
+safety = "^1.9.0"
 
 [tool.coverage.paths]
 source = ["slovodel_bot", "*/site-packages"]

@@ -16,8 +16,8 @@ Example:
 """
 import re
 
-import redis
 import click
+import redis
 
 
 @click.command()

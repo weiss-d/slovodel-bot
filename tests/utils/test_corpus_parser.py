@@ -1,6 +1,6 @@
-import os
 from click.testing import CliRunner
 from markovify import Chain
+
 from slovodel_bot.utils import corpus_parser
 
 

@@ -1,8 +1,7 @@
-import os
-import pytest
 from click.testing import CliRunner
 import fakeredis
 import redis
+
 from slovodel_bot.utils import redis_upload_dict
 
 

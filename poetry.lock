@@ -114,6 +114,17 @@ version = "*"
 toml = ["toml"]
 
 [[package]]
+category = "main"
+description = "Simple creation of data classes from dictionaries."
+name = "dacite"
+optional = false
+python-versions = ">=3.6"
+version = "1.5.1"
+
+[package.extras]
+dev = ["pytest (>=5)", "pytest-cov", "coveralls", "black", "mypy", "pylint"]
+
+[[package]]
 category = "dev"
 description = "A parser for Python dependency files"
 name = "dparse"
@@ -650,7 +661,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "a50846e8e547f83061c799118e77295619ecf96cccac834ccded13cff7b9a1b3"
+content-hash = "8536f5cd8de2880b69f43c6ae1e804f0b3d51e738024b70b14fe06ab9e54689e"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -725,6 +736,10 @@ coverage = [
     {file = "coverage-5.2.1-cp39-cp39-win32.whl", hash = "sha256:9e536783a5acee79a9b308be97d3952b662748c4037b6a24cbb339dc7ed8eb89"},
     {file = "coverage-5.2.1-cp39-cp39-win_amd64.whl", hash = "sha256:b8f58c7db64d8f27078cbf2a4391af6aa4e4767cc08b37555c4ae064b8558d9b"},
     {file = "coverage-5.2.1.tar.gz", hash = "sha256:a34cb28e0747ea15e82d13e14de606747e9e484fb28d63c999483f5d5188e89b"},
+]
+dacite = [
+    {file = "dacite-1.5.1-py3-none-any.whl", hash = "sha256:f7f269647ede90f8702728eb7dcb972051511c81b853a93c962fbd31f1753b9f"},
+    {file = "dacite-1.5.1.tar.gz", hash = "sha256:764c96e0304cb189628686689a163a6a3a8ce7bf3465f0a2d882a8b42f88108f"},
 ]
 dparse = [
     {file = "dparse-0.5.1-py3-none-any.whl", hash = "sha256:e953a25e44ebb60a5c6efc2add4420c177f1d8404509da88da9729202f306994"},

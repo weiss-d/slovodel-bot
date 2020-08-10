@@ -4,7 +4,7 @@ Generating words with Markov Chain and checking its existence in DB dictionary.
 from dataclasses import dataclass
 from enum import Enum, unique
 from pathlib import Path
-from typing import Dict, Union
+from typing import Dict
 
 import markovify
 
@@ -25,6 +25,8 @@ class Configuration:
 
 
 class Slovodel:
+    """Class that is doing all the job, providing you with the freshiest and
+    uniquest non-existent words if it could"""
 
     chains: Dict[wordTypes, markovify.Chain]
     dictionary: db.Dictionary
@@ -37,6 +39,12 @@ class Slovodel:
                 self.chains[wtype] = markovify.Chain.from_json(json_file.read())
 
     def make_unique_word(self, word_type: wordTypes, attempts: int = 100) -> str:
+        """Makes things happen.
+        If you're increasing ammount of attempts, but the function still rises
+        exceptions too often - try to increase the size of dictionary, that
+        you're feeding to markovify.
+        """
+
         for _ in range(attempts):
             word = "".join(self.chains[word_type].walk())
             print(self.dictionary.word_exists(word))

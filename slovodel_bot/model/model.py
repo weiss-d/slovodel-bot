@@ -47,7 +47,6 @@ class Slovodel:
 
         for _ in range(attempts):
             word = "".join(self.chains[word_type].walk())
-            print(self.dictionary.word_exists(word))
             if not self.dictionary.word_exists(word):
                 return word
         raise ValueError("Cannot produce unique word with given ammount of attempts.")

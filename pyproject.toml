@@ -15,8 +15,8 @@ markovify = "^0.8.2"
 toml = "^0.10.1"
 click = "^7.1.2"
 hiredis = "^1.1.0"
-pyTelegramBotAPI = "^3.7.2"
 dacite = "^1.5.1"
+python-telegram-bot = "^12.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.3"

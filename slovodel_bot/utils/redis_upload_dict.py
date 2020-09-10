@@ -40,4 +40,8 @@ def main(input_file, dict_name, host, port, db_id, password):
                 pipe.sadd("{}:{}".format(dict_name, clean_line[0]), clean_line)
                 words_added += 1
         pipe.execute()
-    print("{} lines processed. {} words addes".format(lines_processed, words_added))
+    print("{} lines processed. {} words added".format(lines_processed, words_added))
+
+
+if __name__ == "__main__":
+    main()

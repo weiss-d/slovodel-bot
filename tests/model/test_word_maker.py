@@ -1,7 +1,7 @@
 from unittest.mock import patch
-import pytest
 
 import markovify
+import pytest
 
 from slovodel_bot.model import word_maker
 from slovodel_bot.model import db

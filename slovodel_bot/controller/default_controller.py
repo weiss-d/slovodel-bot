@@ -4,10 +4,10 @@ import re
 
 from telegram import ReplyKeyboardMarkup
 from telegram.ext import (
-    Updater,
     CommandHandler,
-    MessageHandler,
     Filters,
+    MessageHandler,
+    Updater,
 )
 
 from slovodel_bot.model import word_maker

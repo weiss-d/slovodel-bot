@@ -1,0 +1,18 @@
+# Slovodel Bot config
+
+bot_token = "your_token_here"
+welcome_message_file = "slovodel_bot/resources/welcome_message.md"
+
+
+[word_maker_config]
+	[word_maker_config.chain_json_files]
+	NOUN = "slovodel_bot/resources/json_corpus/nouns.json"
+	VERB = "slovodel_bot/resources/json_corpus/verbs.json"
+	ADJECTIVE = "slovodel_bot/resources/json_corpus/adjectives.json"
+
+	[word_maker_config.db_config]
+	dictionary_name = "TEST_DICT"
+	host = "localhost"
+	port = 6379
+	db_id = 0
+	password = ""

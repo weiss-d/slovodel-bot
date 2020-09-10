@@ -1,3 +1,6 @@
+"""
+A collection of functions to send different types of bot messages in corresponding format.
+"""
 from telegram import ParseMode
 from telegram.utils.helpers import escape_markdown
 

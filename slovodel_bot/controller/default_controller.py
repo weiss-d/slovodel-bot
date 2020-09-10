@@ -1,3 +1,6 @@
+"""
+Controller module to be used in default mode.
+"""
 from dataclasses import dataclass
 from pathlib import Path
 import re
@@ -16,12 +19,14 @@ from slovodel_bot.view import keyboard, message_sender
 
 @dataclass
 class Configuration:
+    """Controller config."""
     bot_token: str
     welcome_message_file: Path
     word_maker_config: word_maker.Configuration
 
 
 class defaultController:
+    """Main controller class."""
     bot: Updater
     kbd_markup: ReplyKeyboardMarkup
     configuration: Configuration
@@ -45,12 +50,14 @@ class defaultController:
             self.welcome_message = file.read()
 
     def _get_word_type_regex(self) -> re.compile:
+        """Make a regex for message filter."""
         pattern = []
         for wtype in word_maker.wordTypes:
             pattern.append(r"(\A" + wtype.value + r"\Z)")
         return re.compile("|".join(pattern))
 
     def start_bot(self) -> None:
+        """Start the initialized bot."""
         self.bot.start_polling()
         self.bot.idle()
 

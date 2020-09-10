@@ -20,6 +20,7 @@ class wordTypes(Enum):
 
 @dataclass
 class Configuration:
+    """Module config."""
     chain_json_files: Dict[wordTypes, Path]
     db_config: db.Configuration
 

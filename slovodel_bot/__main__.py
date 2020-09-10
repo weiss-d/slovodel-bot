@@ -1,3 +1,6 @@
+"""
+Main script to acquire the configuration, instantiate and run Controller.
+"""
 from pathlib import Path
 
 import click

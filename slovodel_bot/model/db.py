@@ -1,3 +1,6 @@
+"""
+Module to connect to Redis DB that contains a dictionary and check existence of a word.
+"""
 from dataclasses import dataclass
 from typing import Union
 

@@ -21,9 +21,11 @@ def get_config(file: click.Path) -> default_controller.Configuration:
         with open(file) as config:
             toml_config = toml.load(config)
 
-        return dacite.from_dict(data_class=default_controller.Configuration,
-                            data=toml_config,
-                            config=dacite.Config(type_hooks=converters))
+        return dacite.from_dict(
+            data_class=default_controller.Configuration,
+            data=toml_config,
+            config=dacite.Config(type_hooks=converters),
+        )
     except Exception as e:
         print("Configuration file error:")
         raise click.ClickException(str(e))

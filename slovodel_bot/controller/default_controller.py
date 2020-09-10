@@ -50,11 +50,9 @@ class defaultController:
             pattern.append(r"(\A" + wtype.value + r"\Z)")
         return re.compile("|".join(pattern))
 
-
     def start_bot(self) -> None:
         self.bot.start_polling()
         self.bot.idle()
-
 
     # Command Handlers
 

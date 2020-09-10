@@ -1,6 +1,7 @@
 from telegram import ParseMode
 from telegram.utils.helpers import escape_markdown
 
+
 def send_welcome_message(bot, chat_id, keyboard, text):
     bot.send_message(
         chat_id=chat_id,

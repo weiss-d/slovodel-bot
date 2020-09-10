@@ -4,7 +4,7 @@ import pytest
 import markovify
 
 from slovodel_bot.model import word_maker
-import slovodel_bot.model.db as db
+from slovodel_bot.model import db
 
 
 @pytest.fixture

@@ -8,7 +8,7 @@ from typing import Dict
 
 import markovify
 
-from model import db
+from slovodel_bot.model import db
 
 
 @unique

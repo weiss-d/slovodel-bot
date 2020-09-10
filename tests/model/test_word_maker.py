@@ -3,7 +3,7 @@ import pytest
 
 import markovify
 
-from slovodel_bot.model import model
+from slovodel_bot.model import word_maker
 import slovodel_bot.model.db as db
 
 
@@ -16,11 +16,11 @@ def slovodel_config(tmpdir):
     file_noun.write(markovify.Chain([["абв"]], 1).to_json())
     file_verb.write(markovify.Chain([["вгд"]], 1).to_json())
     file_adjective.write(markovify.Chain([["деж"]], 1).to_json())
-    config = model.Configuration(
+    config = word_maker.Configuration(
         {
-            model.wordTypes.NOUN: file_noun,
-            model.wordTypes.VERB: file_verb,
-            model.wordTypes.ADJECTIVE: file_adjective,
+            word_maker.wordTypes.NOUN: file_noun,
+            word_maker.wordTypes.VERB: file_verb,
+            word_maker.wordTypes.ADJECTIVE: file_adjective,
         },
         db.Configuration("dummy", "dummy", 0, 0, None),
     )
@@ -33,10 +33,10 @@ def test_word_generation_forgone_markovify(we_mock, slovodel_config):
     by Dictionary as always unique."""
     we_mock.return_value = False
 
-    slovodel = model.Slovodel(slovodel_config)
-    assert slovodel.make_unique_word(model.wordTypes.NOUN) == "абв"
-    assert slovodel.make_unique_word(model.wordTypes.VERB) == "вгд"
-    assert slovodel.make_unique_word(model.wordTypes.ADJECTIVE) == "деж"
+    slovodel = word_maker.Slovodel(slovodel_config)
+    assert slovodel.make_unique_word(word_maker.wordTypes.NOUN) == "абв"
+    assert slovodel.make_unique_word(word_maker.wordTypes.VERB) == "вгд"
+    assert slovodel.make_unique_word(word_maker.wordTypes.ADJECTIVE) == "деж"
 
 
 @patch.object(db.Dictionary, "word_exists")
@@ -45,9 +45,9 @@ def test_word_generation_not_unique(we_mock, slovodel_config):
     by Dictionary as always NOT unique."""
     we_mock.return_value = True
 
-    slovodel = model.Slovodel(slovodel_config)
+    slovodel = word_maker.Slovodel(slovodel_config)
 
-    for word_type in model.wordTypes:
+    for word_type in word_maker.wordTypes:
         with pytest.raises(ValueError) as error:
             slovodel.make_unique_word(word_type, attempts=1)
         assert (

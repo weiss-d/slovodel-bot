@@ -9,10 +9,10 @@ class Configuration:
     """Database configuration."""
 
     dictionary_name: str
-    host: str
-    port: int
-    db_id: int
-    password: Union[str, None]
+    host: str = "localhost"
+    port: int = 6379
+    db_id: int = 0
+    password: Union[str, None] = None
 
 
 class Dictionary:

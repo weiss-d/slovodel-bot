@@ -9,7 +9,6 @@ repository = "https://github.com/weiss-d/slovodel-bot"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-redis = "^3.5.3"
 rusyll = "^0.1.1"
 markovify = "^0.8.2"
 toml = "^0.10.1"
@@ -17,6 +16,7 @@ click = "^7.1.2"
 hiredis = "^1.1.0"
 dacite = "^1.5.1"
 python-telegram-bot = "^12.8"
+redis = "^3.5.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.3"

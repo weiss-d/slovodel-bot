@@ -8,7 +8,7 @@ from typing import Dict
 
 import markovify
 
-import slovodel_bot.model.db as db
+from model import db
 
 
 @unique
@@ -21,7 +21,7 @@ class wordTypes(Enum):
 @dataclass
 class Configuration:
     chain_json_files: Dict[wordTypes, Path]
-    dictionary_config: db.Configuration
+    db_config: db.Configuration
 
 
 class Slovodel:
@@ -31,8 +31,8 @@ class Slovodel:
     chains: Dict[wordTypes, markovify.Chain]
     dictionary: db.Dictionary
 
-    def __init__(self, config: Configuration):
-        self.dictionary = db.Dictionary(config.dictionary_config)
+    def __init__(self, config: Configuration) -> None:
+        self.dictionary = db.Dictionary(config.db_config)
         self.chains = {}
         for wtype in wordTypes:
             with config.chain_json_files[wtype].open() as json_file:

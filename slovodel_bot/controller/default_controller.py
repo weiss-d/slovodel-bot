@@ -57,9 +57,19 @@ class defaultController:
         return re.compile("|".join(pattern))
 
     def start_bot(self) -> None:
-        """Start the initialized bot."""
+        """Start the initialized bot in polling mode."""
         self.bot.start_polling()
         self.bot.idle()
+
+    def start_bot_webhook(self, listen: str, port: int, webhook_url: str) -> None:
+        """Start the initialized bot in webhook mode."""
+        self.bot.start_webhook(listen=listen,
+                               port=port,
+                               url_path=self.configuration.bot_token,
+                               )
+        self.bot.bot.set_webhook(webhook_url + self.configuration.bot_token)
+        self.bot.idle()
+
 
     # Command Handlers
 

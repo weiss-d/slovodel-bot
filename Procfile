@@ -1,1 +1,1 @@
-web: python3 slovodel_bot/__main__.py bot_config.toml
+web: python3 slovodel_bot/heroku.py bot_config.toml

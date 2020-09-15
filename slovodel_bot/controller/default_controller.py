@@ -34,7 +34,8 @@ class defaultController:
 
     def __init__(self, configuration: Configuration) -> None:
         # Preparing the bot
-        self.bot = Updater(token=configuration.bot_token, use_context=True)
+        self.configuration = configuration
+        self.bot = Updater(token=self.configuration.bot_token, use_context=True)
         self.bot.dispatcher.add_handler(CommandHandler("start", self.__cmd_start))
         self.bot.dispatcher.add_handler(
             MessageHandler(
@@ -45,8 +46,8 @@ class defaultController:
         self.bot.dispatcher.add_handler(MessageHandler(Filters.text, self.__msg_other))
         self.kbd_markup = keyboard.get_standard(word_maker.wordTypes)
         # Preparing everything else
-        self.slovodel = word_maker.Slovodel(configuration.word_maker_config)
-        with configuration.welcome_message_file.open() as file:
+        self.slovodel = word_maker.Slovodel(self.configuration.word_maker_config)
+        with self.configuration.welcome_message_file.open() as file:
             self.welcome_message = file.read()
 
     def _get_word_type_regex(self) -> re.compile:

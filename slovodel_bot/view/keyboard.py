@@ -10,5 +10,5 @@ def get_standard(word_types: Iterable) -> ReplyKeyboardMarkup:
     """Makes plain one-row keyboard from enums and dataclasses."""
     return ReplyKeyboardMarkup(
         [[item.value for item in word_types]],
-        # resize_keyboard=True
+        resize_keyboard=True
     )

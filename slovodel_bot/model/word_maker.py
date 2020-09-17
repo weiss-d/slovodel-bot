@@ -13,9 +13,9 @@ from slovodel_bot.model import db
 
 @unique
 class wordTypes(Enum):
-    NOUN = "Сущ."
-    VERB = "Глаг."
-    ADJECTIVE = "Прил."
+    NOUN = "Существительное"
+    ADJECTIVE = "Прилагательное"
+    VERB = "Глагол"
 
 
 @dataclass

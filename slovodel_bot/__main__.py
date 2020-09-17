@@ -16,7 +16,7 @@ DEFAULT_CONFIG_PATH = "bot_config.toml"
 @click.argument("config_path", type=click.Path("rt"), nargs=-1)
 def main(config_path) -> None:
     """Instanciate controller and run bot."""
-    config_file = Path(config_path[0])
+    config_file = Path(config_path[0]) if config_path else Path(DEFAULT_CONFIG_PATH)
     try:
         config = config_parser.get_dataclass(config_file)
     except:

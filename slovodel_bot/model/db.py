@@ -7,6 +7,9 @@ from typing import Union
 import redis
 
 
+ALPHABET = "абвгдежзиклмнопрстуфхцчшщэюя"
+
+
 @dataclass
 class Configuration:
     """Database configuration."""
@@ -29,6 +32,9 @@ class Dictionary:
             config.host, config.port, config.db_id, config.password
         )
         self.dictionary_name = config.dictionary_name
+        for letter in ALPHABET:
+            if not self.redis_client.exists(f"{self.dictionary_name}:{letter}"):
+                raise NameError("Dictionary for letter '{}' is not found in database. Check your configuration or DB.".format(letter))
 
     def word_exists(self, word: str) -> bool:
         """Check existence of the word in dictionary"""

@@ -27,10 +27,12 @@ def slovodel_config(tmpdir):
     return config
 
 
+@patch.object(db.Dictionary, "__init__")
 @patch.object(db.Dictionary, "word_exists")
-def test_word_generation_forgone_markovify(we_mock, slovodel_config):
+def test_word_generation_forgone_markovify(we_mock, init, slovodel_config):
     """The results of markovify.Chain.walk are forgone and reported
     by Dictionary as always unique."""
+    init.return_value = None
     we_mock.return_value = False
 
     slovodel = word_maker.Slovodel(slovodel_config)
@@ -39,10 +41,12 @@ def test_word_generation_forgone_markovify(we_mock, slovodel_config):
     assert slovodel.make_unique_word(word_maker.wordTypes.ADJECTIVE) == "деж"
 
 
+@patch.object(db.Dictionary, "__init__")
 @patch.object(db.Dictionary, "word_exists")
-def test_word_generation_not_unique(we_mock, slovodel_config):
+def test_word_generation_not_unique(we_mock, init, slovodel_config):
     """The results of markovify.Chain.walk are forgone and reported
     by Dictionary as always NOT unique."""
+    init.return_value = None
     we_mock.return_value = True
 
     slovodel = word_maker.Slovodel(slovodel_config)

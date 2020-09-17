@@ -4,7 +4,7 @@ Making non-existent Russian words using Markov chains.
 
 [ПОСМОТРЕТЬ В ДЕЙСТВИИ / TRY IT OUT](http://t.me/slovodel_bot)↗️
 
-![]()
+![Велимир Хлебников на Украине. Портрет с корзинами. Автор неизвестен.](velimir.png)
 Посвящается Велимиру Хлебникову.
 
   * [Фармакология](#фармакология)

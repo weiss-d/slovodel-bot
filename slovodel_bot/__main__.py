@@ -27,5 +27,4 @@ def main(config_path) -> None:
     ctrl.start_bot()
 
 
-if __name__ == "__main__":
-    main()
+main()

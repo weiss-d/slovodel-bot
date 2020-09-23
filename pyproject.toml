@@ -20,7 +20,7 @@ redis = "^3.5.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.3"
-coverage = {extras = ["toml"], version = "^5.2.1"}
+coverage = {extras = ["toml"], version = "^5.3"}
 pytest-cov = "^2.10.0"
 pytest-mock = "^3.2.0"
 fakeredis = "^1.4.1"

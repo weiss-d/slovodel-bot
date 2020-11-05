@@ -27,10 +27,7 @@ class Configuration:
 
 class Slovodel:
     """Class that is doing all the job, providing you with the freshiest and
-    uniquest non-existent words if it could"""
-
-    chains: Dict[wordTypes, markovify.Chain]
-    dictionary: db.Dictionary
+    uniquest non-existent words."""
 
     def __init__(self, config: Configuration) -> None:
         self.dictionary = db.Dictionary(config.db_config)

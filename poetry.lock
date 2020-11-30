@@ -536,7 +536,7 @@ dev = ["pre-commit", "tox", "pytest-asyncio"]
 
 [[package]]
 name = "python-telegram-bot"
-version = "13.0"
+version = "13.1"
 description = "We have made you a wrapper you can't refuse"
 category = "main"
 optional = false
@@ -547,6 +547,7 @@ APScheduler = "3.6.3"
 certifi = "*"
 cryptography = "*"
 decorator = ">=4.4.0"
+pytz = ">=2018.6"
 tornado = ">=5.1"
 
 [package.extras]
@@ -743,7 +744,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "258019a67be89548ccda70c7c03d27292565b3b2746e7860864db925bbb8c983"
+content-hash = "711b11bbc3d03af75110b1f59fdffe20e51f95f02f169b76a60005b92d53bfc1"
 
 [metadata.files]
 appdirs = [
@@ -1057,8 +1058,8 @@ pytest-mock = [
     {file = "pytest_mock-3.3.1-py3-none-any.whl", hash = "sha256:024e405ad382646318c4281948aadf6fe1135632bea9cc67366ea0c4098ef5f2"},
 ]
 python-telegram-bot = [
-    {file = "python-telegram-bot-13.0.tar.gz", hash = "sha256:ca78a41626d728a8f51affa792270e210fa503ed298d395bed2bd1281842dca3"},
-    {file = "python_telegram_bot-13.0-py2.py3-none-any.whl", hash = "sha256:c9fdd77f303fe168bdf669fb2e2129567fde882cc9382a6171c1571d0ac99df4"},
+    {file = "python-telegram-bot-13.1.tar.gz", hash = "sha256:5feebb08ed08d7b71ceb4c05372b9f6a21d83994b5018db111509765881c8282"},
+    {file = "python_telegram_bot-13.1-py3-none-any.whl", hash = "sha256:9a887a5057d1eb4fede9d04f736d53365cdb1cda1035c0f4fecb645cfd59c456"},
 ]
 pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},

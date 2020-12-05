@@ -4,8 +4,8 @@ from slovodel_bot.model import word_maker
 
 def test_get_keyboard():
     kb_dict_referense = {
-        "keyboard": [["Сущ.", "Глаг.", "Прил."]],
-        "resize_keyboard": False,
+        "keyboard": [["Существительное", "Прилагательное", "Глагол"]],
+        "resize_keyboard": True,
         "one_time_keyboard": False,
         "selective": False,
     }

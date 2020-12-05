@@ -13,9 +13,9 @@ def slovodel_config(tmpdir):
     file_noun = path.join("noun.json")
     file_verb = path.join("verb.json")
     file_adjective = path.join("adjective.json")
-    file_noun.write(markovify.Chain([["абв"]], 1).to_json())
-    file_verb.write(markovify.Chain([["вгд"]], 1).to_json())
-    file_adjective.write(markovify.Chain([["деж"]], 1).to_json())
+    file_noun.write(markovify.Chain([["абвг"]], 1).to_json())
+    file_verb.write(markovify.Chain([["вгде"]], 1).to_json())
+    file_adjective.write(markovify.Chain([["дежз"]], 1).to_json())
     config = word_maker.Configuration(
         {
             word_maker.wordTypes.NOUN: file_noun,
@@ -36,9 +36,9 @@ def test_word_generation_forgone_markovify(we_mock, init, slovodel_config):
     we_mock.return_value = False
 
     slovodel = word_maker.Slovodel(slovodel_config)
-    assert slovodel.make_unique_word(word_maker.wordTypes.NOUN) == "абв"
-    assert slovodel.make_unique_word(word_maker.wordTypes.VERB) == "вгд"
-    assert slovodel.make_unique_word(word_maker.wordTypes.ADJECTIVE) == "деж"
+    assert slovodel.make_unique_word(word_maker.wordTypes.NOUN) == "абвг"
+    assert slovodel.make_unique_word(word_maker.wordTypes.VERB) == "вгде"
+    assert slovodel.make_unique_word(word_maker.wordTypes.ADJECTIVE) == "дежз"
 
 
 @patch.object(db.Dictionary, "__init__")

@@ -56,5 +56,5 @@ def test_word_generation_not_unique(we_mock, init, slovodel_config):
             slovodel.make_unique_word(word_type, attempts=1)
         assert (
             str(error.value)
-            == "Cannot produce unique word with given ammount of attempts."
+            == "Cannot produce unique word with given amount of attempts."
         )

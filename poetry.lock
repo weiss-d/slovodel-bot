@@ -616,7 +616,7 @@ python-versions = ">=3.7,<4.0"
 
 [[package]]
 name = "safety"
-version = "1.9.0"
+version = "1.10.1"
 description = "Checks installed dependencies for known vulnerabilities."
 category = "dev"
 optional = false
@@ -743,7 +743,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cc67f403466c67f4f9c1e95928941478a7c558caf32e45ec73dea157868f2a5d"
+content-hash = "a0c565868fa2dccc952d86eb411ce3c1aeffc7ebc70e28abd8aefefaf5a34b0a"
 
 [metadata.files]
 appdirs = [
@@ -1130,8 +1130,8 @@ rusyll = [
     {file = "rusyll-0.1.1.tar.gz", hash = "sha256:c11e7ee8cb6f5f14adba19869e007ec7a2e1c49835059ca286b40752b7f7bc6e"},
 ]
 safety = [
-    {file = "safety-1.9.0-py2.py3-none-any.whl", hash = "sha256:86c1c4a031fe35bd624fce143fbe642a0234d29f7cbf7a9aa269f244a955b087"},
-    {file = "safety-1.9.0.tar.gz", hash = "sha256:23bf20690d4400edc795836b0c983c2b4cbbb922233108ff925b7dd7750f00c9"},
+    {file = "safety-1.10.1-py2.py3-none-any.whl", hash = "sha256:6e86b4bd47ea6e8f623045bd3687342fb5ac402fb37147fca82fd5a752ec3afc"},
+    {file = "safety-1.10.1.tar.gz", hash = "sha256:f2ab09596ebcbb4012fb7345d2dbda28319c8f3c2731ef6e27ba206b279c13b2"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},

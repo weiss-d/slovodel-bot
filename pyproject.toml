@@ -31,7 +31,7 @@ flake8-black = "^0.2.1"
 flake8-bugbear = "^20.11.1"
 flake8-import-order = "^0.18.1"
 safety = "^1.9.0"
-mypy = "^0.790"
+mypy = "^0.800"
 
 [tool.coverage.paths]
 source = ["slovodel_bot", "*/site-packages"]

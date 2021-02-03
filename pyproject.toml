@@ -15,7 +15,7 @@ toml = "^0.10.2"
 click = "^7.1.2"
 hiredis = "^1.1.0"
 dacite = "^1.6.0"
-python-telegram-bot = "^13.1"
+python-telegram-bot = "^13.2"
 redis = "^3.5.3"
 
 [tool.poetry.dev-dependencies]

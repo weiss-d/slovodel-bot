@@ -179,14 +179,6 @@ python-versions = ">=3.6"
 dev = ["pytest (>=5)", "pytest-cov", "coveralls", "black", "mypy", "pylint"]
 
 [[package]]
-name = "decorator"
-version = "4.4.2"
-description = "Decorators for Humans"
-category = "main"
-optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*"
-
-[[package]]
 name = "dparse"
 version = "0.5.1"
 description = "A parser for Python dependency files"
@@ -535,17 +527,16 @@ dev = ["pre-commit", "tox", "pytest-asyncio"]
 
 [[package]]
 name = "python-telegram-bot"
-version = "13.1"
+version = "13.2"
 description = "We have made you a wrapper you can't refuse"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [package.dependencies]
 APScheduler = "3.6.3"
 certifi = "*"
 cryptography = "*"
-decorator = ">=4.4.0"
 pytz = ">=2018.6"
 tornado = ">=5.1"
 
@@ -743,7 +734,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cc67f403466c67f4f9c1e95928941478a7c558caf32e45ec73dea157868f2a5d"
+content-hash = "7a3ef9e9fb3bec262a812e928ea782766a4439ccf0d148c8a095ee0d9474d8a2"
 
 [metadata.files]
 appdirs = [
@@ -893,10 +884,6 @@ cryptography = [
 dacite = [
     {file = "dacite-1.6.0-py3-none-any.whl", hash = "sha256:4331535f7aabb505c732fa4c3c094313fc0a1d5ea19907bf4726a7819a68b93f"},
     {file = "dacite-1.6.0.tar.gz", hash = "sha256:d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df"},
-]
-decorator = [
-    {file = "decorator-4.4.2-py2.py3-none-any.whl", hash = "sha256:41fa54c2a0cc4ba648be4fd43cff00aedf5b9465c9bf18d64325bc225f08f760"},
-    {file = "decorator-4.4.2.tar.gz", hash = "sha256:e3a62f0520172440ca0dcc823749319382e377f37f140a0b99ef45fecb84bfe7"},
 ]
 dparse = [
     {file = "dparse-0.5.1-py3-none-any.whl", hash = "sha256:e953a25e44ebb60a5c6efc2add4420c177f1d8404509da88da9729202f306994"},
@@ -1072,8 +1059,8 @@ pytest-mock = [
     {file = "pytest_mock-3.4.0-py3-none-any.whl", hash = "sha256:c0fc979afac4aaba545cbd01e9c20736eb3fefb0a066558764b07d3de8f04ed3"},
 ]
 python-telegram-bot = [
-    {file = "python-telegram-bot-13.1.tar.gz", hash = "sha256:5feebb08ed08d7b71ceb4c05372b9f6a21d83994b5018db111509765881c8282"},
-    {file = "python_telegram_bot-13.1-py3-none-any.whl", hash = "sha256:9a887a5057d1eb4fede9d04f736d53365cdb1cda1035c0f4fecb645cfd59c456"},
+    {file = "python-telegram-bot-13.2.tar.gz", hash = "sha256:b87cdb2fca2983d4d49287c76ea64f13c5b786260bb742fe9a28334f20e6b2d3"},
+    {file = "python_telegram_bot-13.2-py3-none-any.whl", hash = "sha256:12adf52b59d7b23ba26b1f3e25ca95a4f850985ebf08a019bb7fd835c432929b"},
 ]
 pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},

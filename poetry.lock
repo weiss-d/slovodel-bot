@@ -359,7 +359,7 @@ python-versions = "*"
 
 [[package]]
 name = "markovify"
-version = "0.8.3"
+version = "0.9.0"
 description = "A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text."
 category = "main"
 optional = false
@@ -743,7 +743,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cc67f403466c67f4f9c1e95928941478a7c558caf32e45ec73dea157868f2a5d"
+content-hash = "dcea452876d48aaaef124ca5ea9f9bd4685312e094b90a7e04033027ab2d9432"
 
 [metadata.files]
 appdirs = [
@@ -997,7 +997,7 @@ iniconfig = [
     {file = "iniconfig-1.0.1.tar.gz", hash = "sha256:e5f92f89355a67de0595932a6c6c02ab4afddc6fcdc0bfc5becd0d60884d3f69"},
 ]
 markovify = [
-    {file = "markovify-0.8.3.tar.gz", hash = "sha256:254405c5b2f819ae388c39a53e6bc038bfbc24713441869ce90a1cd67e4a89ce"},
+    {file = "markovify-0.9.0.tar.gz", hash = "sha256:6bed379c6143741d6f7344f8d88526b0387ede23cf798f1e5ab99f525d6dba4d"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},

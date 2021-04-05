@@ -19,7 +19,7 @@ python-telegram-bot = "^13.1"
 redis = "^3.5.3"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.1"
+pytest = "^6.2.3"
 coverage = {extras = ["toml"], version = "^5.3"}
 pytest-cov = "^2.10.0"
 pytest-mock = "^3.4.0"

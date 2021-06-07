@@ -204,7 +204,7 @@ pipenv = ["pipenv"]
 
 [[package]]
 name = "fakeredis"
-version = "1.4.5"
+version = "1.5.2"
 description = "Fake implementation of redis API for testing purposes."
 category = "dev"
 optional = false
@@ -216,7 +216,7 @@ six = ">=1.12"
 sortedcontainers = "*"
 
 [package.extras]
-aioredis = ["aioredis"]
+aioredis = ["aioredis (<2)"]
 lua = ["lupa"]
 
 [[package]]
@@ -743,7 +743,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cc67f403466c67f4f9c1e95928941478a7c558caf32e45ec73dea157868f2a5d"
+content-hash = "fa8ed9673282906d16d80b85693c9e2a4cc1778dcd7c0bc73e54099c00884318"
 
 [metadata.files]
 appdirs = [
@@ -895,8 +895,8 @@ dparse = [
     {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
 ]
 fakeredis = [
-    {file = "fakeredis-1.4.5-py3-none-any.whl", hash = "sha256:2c6041cf0225889bc403f3949838b2c53470a95a9e2d4272422937786f5f8f73"},
-    {file = "fakeredis-1.4.5.tar.gz", hash = "sha256:01cb47d2286825a171fb49c0e445b1fa9307087e07cbb3d027ea10dbff108b6a"},
+    {file = "fakeredis-1.5.2-py3-none-any.whl", hash = "sha256:f1ffdb134538e6d7c909ddfb4fc5edeb4a73d0ea07245bc69b8135fbc4144b04"},
+    {file = "fakeredis-1.5.2.tar.gz", hash = "sha256:18fc1808d2ce72169d3f11acdb524a00ef96bd29970c6d34cfeb2edb3fc0c020"},
 ]
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
@@ -907,6 +907,7 @@ flake8-bandit = [
 ]
 flake8-black = [
     {file = "flake8-black-0.2.1.tar.gz", hash = "sha256:f26651bc10db786c03f4093414f7c9ea982ed8a244cec323c984feeffdf4c118"},
+    {file = "flake8_black-0.2.1-py3-none-any.whl", hash = "sha256:941514149cb8b489cb17a4bb1cf18d84375db3b34381bb018de83509437931a0"},
 ]
 flake8-bugbear = [
     {file = "flake8-bugbear-20.11.1.tar.gz", hash = "sha256:528020129fea2dea33a466b9d64ab650aa3e5f9ffc788b70ea4bc6cf18283538"},

@@ -33,7 +33,7 @@ RIP free Heroku
 Ещё одна цель проекта - реализовать на практике:
 * паттерн MVC на Python
 * современный целостный подход к разработке на Python, описанный в [этой серии статей](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)↗️
-* лучшие практики для работы с конфигурацией в Python, предложенные [здесь](https://www.notion.so/Best-Practices-for-Working-with-Configuration-in-Python-Applications-Preferred-Networks-Research--46a5dee5b1114c66a1eedd8624b67bad#24c930d67a8b452989164f25cc6322cf)↗️
+* ~~лучшие практики для работы с конфигурацией в Python, предложенные [здесь](https://www.notion.so/Best-Practices-for-Working-with-Configuration-in-Python-Applications-Preferred-Networks-Research--46a5dee5b1114c66a1eedd8624b67bad#24c930d67a8b452989164f25cc6322cf)↗️~~ Не надо так, делайте всё через Pydantic :)
 
 Поэтому его структура немного сложнее обычного.
 
